@@ -14,4 +14,8 @@ jobs:
       - name: Set up Python3
         uses: actions/setup-python@v3
       - name: Install deps
-        run: pip3 install -r requirements.txt
+        run: make deps
+      - name: Lint
+        run: make lint
+      - name: Test
+        run: make test
